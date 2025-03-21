@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Zaruhiren - Dictionary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            color: #45a049;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        #searchBar {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 20px auto;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .tabs {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .tab-button {
+            background-color: #ddd;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+        .tab-button:hover {
+            background-color: #ccc;
+        }
+        .tab-button.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-top: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="grammar.html">Grammar</a>
+        <a href="dictionary.html">Dictionary</a>
+    </div>
+    <h1>Kwevita Language Dictionary</h1>
+    <input type="text" id="searchBar" placeholder="Search words..." onkeyup="filterTable()">
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab('nouns')">Nouns</button>
+        <button class="tab-button" onclick="openTab('adjectives')">Adjectives</button>
+        <button class="tab-button" onclick="openTab('verbs')">Verbs</button>
+        <button class="tab-button" onclick="openTab('numbers')">Numbers</button>
+        <button class="tab-button" onclick="openTab('prepositions')">Prepositions</button>
+        <button class="tab-button" onclick="openTab('detailMarkers')">Detail Markers</button>
+    </div>
+
+    <div id="nouns" class="tab-content" style="display: block;">
+        <table>
+            <thead>
+                <tr><th>Word</th><th>Meaning</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Zaru</td><td>Sand</td></tr>
+                <tr><td>Sola</td><td>Sun</td></tr>
+                <tr><td>Aqua</td><td>Water</td></tr>
+                <tr><td>Roka</td><td>Rock/Stone</td></tr>
+                <tr><td>Fuma</td><td>Fire</td></tr>
+                <tr><td>Kwe</td><td>Place/Home</td></tr>
+                <tr><td>Tribu</td><td>Tribe</td></tr>
+                <tr><td>Hiru</td><td>Person</td></tr>
+                <tr><td>Vadis</td><td>Food/Meal</td></tr>
+                <tr><td>Lizu</td><td>Lizard</td></tr>
+                <tr><td>Bovi</td><td>Cow</td></tr>
+                <tr><td>Skai</td><td>Sky</td></tr>
+                <tr><td>Poir</td><td>House</td></tr>
+                <tr><td>Tuma</td><td>Wind</td></tr>
+                <tr><td>Nifa</td><td>Slave</td></tr>
+                <tr><td>Karma</td><td>Magic/Power</td></tr>
+                <tr><td>Jibu</td><td>Chain</td></tr>
+                <tr><td>Feto</td><td>Weapon</td></tr>
+                <tr><td>Hazu</td><td>Ship</td></tr>
+                <tr><td>Moku</td><td>Tree</td></tr>
+                <tr><td>Rifu</td><td>Cloth/Cloak</td></tr>
+                <tr><td>Tazo</td><td>Elder</td></tr>
+                <tr><td>Bina</td><td>Blood</td></tr>
+                <tr><td>Wetu</td><td>Path</td></tr>
+                <tr><td>Kiju</td><td>Hunter</td></tr>
+                <tr><td>Yuma</td><td>Star</td></tr>
+                <tr><td>Doro</td><td>Dust</td></tr>
+                <tr><td>Gila</td><td>Spear</td></tr>
+                <tr><td>Voro</td><td>Book</td></tr>
+                <tr><td>Tefi</td><td>Crystal</td></tr>
+                <tr><td>Bazu</td><td>Bird</td></tr>
+                <tr><td>Jora</td><td>Storm</td></tr>
+                <tr><td>Kuta</td><td>Cave</td></tr>
+                <tr><td>Hifu</td><td>Knife</td></tr>
+                <tr><td>Pazu</td><td>Bowl</td></tr>
+                <tr><td>Ruma</td><td>Wall</td></tr>
+                <tr><td>Sito</td><td>Ground</td></tr>
+                <tr><td>Fija</td><td>Rope</td></tr>
+                <tr><td>Noku</td><td>Bone</td></tr>
+                <tr><td>Tivu</td><td>Shadow</td></tr>
+                <tr><td>Yazo</td><td>Hill</td></tr>
+                <tr><td>Guto</td><td>Sand dune</td></tr>
+                <tr><td>Biku</td><td>Shield</td></tr>
+                <tr><td>Homa</td><td>Meat</td></tr>
+                <tr><td>Zitu</td><td>Eye</td></tr>
+                <tr><td>Koro</td><td>Hand</td></tr>
+                <tr><td>Funu</td><td>Foot</td></tr>
+                <tr><td>Jemi</td><td>Head</td></tr>
+                <tr><td>Razi</td><td>Hair</td></tr>
+                <tr><td>Toka</td><td>Skin</td></tr>
+                <tr><td>Wifu</td><td>Breath</td></tr>
+                <tr><td>Bemo</td><td>Voice</td></tr>
+                <tr><td>Nita</td><td>Night</td></tr>
+                <tr><td>Yiru</td><td>Day</td></tr>
+                <tr><td>Gofa</td><td>Cloud</td></tr>
+                <tr><td>Haku</td><td>Rain</td></tr>
+                <tr><td>Zemo</td><td>Heat</td></tr>
+                <tr><td>Kizu</td><td>Coldness</td></tr>
+                <tr><td>Fato</td><td>Trap</td></tr>
+                <tr><td>Juto</td><td>Door</td></tr>
+                <tr><td>Reko</td><td>Window</td></tr>
+                <tr><td>Suma</td><td>Table</td></tr>
+                <tr><td>Bita</td><td>Bed</td></tr>
+                <tr><td>Nizu</td><td>Cloth</td></tr>
+                <tr><td>Tahu</td><td>Sandstorm</td></tr>
+                <tr><td>Yofa</td><td>Enemy</td></tr>
+                <tr><td>Gimu</td><td>Friend</td></tr>
+                <tr><td>Hiza</td><td>Child</td></tr>
+                <tr><td>Zofu</td><td>Adult</td></tr>
+                <tr><td>Kema</td><td>Leader</td></tr>
+                <tr><td>Fivu</td><td>Guard</td></tr>
+                <tr><td>Jaka</td><td>Market</td></tr>
+                <tr><td>Ruto</td><td>Coin</td></tr>
+                <tr><td>Sivu</td><td>Gold</td></tr>
+                <tr><td>Boku</td><td>Silver</td></tr>
+                <tr><td>Nema</td><td>Iron</td></tr>
+                <tr><td>Tizu</td><td>Steel</td></tr>
+                <tr><td>Yaku</td><td>Wood</td></tr>
+                <tr><td>Gazo</td><td>Stone (material)</td></tr>
+                <tr><td>Hifu</td><td>Leather</td></tr>
+                <tr><td>Zatu</td><td>Horn</td></tr>
+                <tr><td>Kifu</td><td>Tooth</td></tr>
+                <tr><td>Fuma</td><td>Flame</td></tr>
+                <tr><td>Jiro</td><td>Spark</td></tr>
+                <tr><td>Raka</td><td>Thunder</td></tr>
+                <tr><td>Sotu</td><td>Lightning</td></tr>
+                <tr><td>Bifu</td><td>Mist</td></tr>
+                <tr><td>Nuko</td><td>Fog</td></tr>
+                <tr><td>Tefa</td><td>Warmth</td></tr>
+                <tr><td>Yizu</td><td>Ice</td></tr>
+                <tr><td>Gahu</td><td>Poison</td></tr>
+                <tr><td>Huto</td><td>Cure</td></tr>
+                <tr><td>Ziku</td><td>Wound</td></tr>
+                <tr><td>Kova</td><td>Mark (like Burja’s)</td></tr>
+                <tr><td>Fetu</td><td>Power</td></tr>
+                <tr><td>Jahu</td><td>Fear</td></tr>
+                <tr><td>Rizu</td><td>Hope</td></tr>
+                <tr><td>Saka</td><td>Joy</td></tr>
+                <tr><td>Buno</td><td>Pain</td></tr>
+                <tr><td>Nofi</td><td>Death</td></tr>
+                <tr><td>Tivu</td><td>Life (alternative to “vita”)</td></tr>
+		<tr><td>Fazu</td><td>Wolf</td></tr>
+		<tr><td>Tiku</td><td>Snake</td></tr>
+		<tr><td>Rahu</td><td>Bird (small, like a sparrow)</td></tr>
+		<tr><td>Sizu</td><td>Scorpion</td></tr>
+		<tr><td>Bahu</td><td>Camel</td></tr>
+		<tr><td>Nifu</td><td>Fox</td></tr>
+		<tr><td>Jazu</td><td>Hawk</td></tr>
+		<tr><td>Kihu</td><td>Rat</td></tr>
+		<tr><td>Zifu</td><td>Beetle</td></tr>
+		<tr><td>Wahu</td><td>Deer</td></tr>
+		<tr><td>Gizu</td><td>Vulture</td></tr>
+		<tr><td>Hifu</td><td>Coyote</td></tr>
+		<tr><td>Yazu</td><td>Toad</td></tr>
+		<tr><td>Mihu</td><td>Horse</td></tr>
+		<tr><td>Tazu</td><td>Bat</td></tr>
+		<tr><td>Rifu</td><td>Owl</td></tr>
+		<tr><td>Fihu</td><td>Fish</td></tr>
+		<tr><td>Sahu</td><td>Spider</td></tr>
+		<tr><td>Bizu</td><td>Goat</td></tr>
+		<tr><td>Nahu</td><td>Eagle</td></tr>
+		<tr><td>Jora</td><td>Desert</td></tr>
+		<tr><td>Kutu</td><td>Mountain</td></tr>
+		<tr><td>Zahu</td><td>River</td></tr>
+		<tr><td>Tifu</td><td>Ocean</td></tr>
+		<tr><td>Razu</td><td>Valley</td></tr>
+		<tr><td>Sifu</td><td>Canyon</td></tr>
+		<tr><td>Bahu</td><td>Plain</td></tr>
+		<tr><td>Nizu</td><td>Forest</td></tr>
+		<tr><td>Wahu</td><td>Lake</td></tr>
+		<tr><td>Gifu</td><td>Cliff</td></tr>
+		<tr><td>Hazu</td><td>Plateau</td></tr>
+		<tr><td>Yifu</td><td>Oasis</td></tr>
+		<tr><td>Mazu</td><td>Swamp</td></tr>
+		<tr><td>Fahu</td><td>Dune</td></tr>
+		<tr><td>Tahu</td><td>Ridge</td></tr>
+		<tr><td>Rihu</td><td>Cactus</td></tr>
+		<tr><td>Sazu</td><td>Bush</td></tr>
+		<tr><td>Bifu</td><td>Grass</td></tr>
+		<tr><td>Nahu</td><td>Flower</td></tr>
+		<tr><td>Jizu</td><td>Tree (small, scrubby)</td></tr>
+		<tr><td>Kahu</td><td>Vine</td></tr>
+		<tr><td>Zifu</td><td>Moss</td></tr>
+		<tr><td>Wazu</td><td>Fern</td></tr>
+		<tr><td>Gihu</td><td>Reed</td></tr>
+		<tr><td>Hifu</td><td>Thorn</td></tr>
+		<tr><td>Yazu</td><td>Copper</td></tr>
+		<tr><td>Mifu</td><td>Bronze</td></tr>
+		<tr><td>Tizu</td><td>Tin</td></tr>
+		<tr><td>Rahu</td><td>Lead</td></tr>
+		<tr><td>Sifu</td><td>Platinum</td></tr>
+		<tr><td>Bazu</td><td>Nickel</td></tr>
+		<tr><td>Nifu</td><td>Zinc</td></tr>
+		<tr><td>Jahu</td><td>Aluminum</td></tr>
+		<tr><td>Kizu</td><td>Titanium</td></tr>
+		<tr><td>Wifu</td><td>Glass</td></tr>
+		<tr><td>Fazu</td><td>Spirit</td></tr>
+		<tr><td>Tahu</td><td>Song</td></tr>
+		<tr><td>Rizu</td><td>Dance</td></tr>
+		<tr><td>Sahu</td><td>Story</td></tr>
+		<tr><td>Bihu</td><td>Tool</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="adjectives" class="tab-content">
+        <table>
+            <thead>
+                <tr><th>Word</th><th>Meaning</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Ruba</td><td>Red</td></tr>
+                <tr><td>Bizu</td><td>Blue</td></tr>
+                <tr><td>Maga</td><td>Big</td></tr>
+                <tr><td>Peti</td><td>Small</td></tr>
+                <tr><td>Tanu</td><td>Free</td></tr>
+                <tr><td>Bona</td><td>Good</td></tr>
+                <tr><td>Mala</td><td>Bad/Evil</td></tr>
+                <tr><td>Zefi</td><td>Hot</td></tr>
+                <tr><td>Koru</td><td>Cold</td></tr>
+                <tr><td>Luma</td><td>Bright</td></tr>
+                <tr><td>Duna</td><td>Dark</td></tr>
+                <tr><td>Hari</td><td>Hard</td></tr>
+                <tr><td>Sofu</td><td>Soft</td></tr>
+                <tr><td>Velo</td><td>Fast</td></tr>
+                <tr><td>Tadi</td><td>Slow</td></tr>
+                <tr><td>Jona</td><td>Strong</td></tr>
+                <tr><td>Weka</td><td>Weak</td></tr>
+                <tr><td>Fila</td><td>High</td></tr>
+                <tr><td>Bahu</td><td>Low</td></tr>
+                <tr><td>Nizu</td><td>New</td></tr>
+                <tr><td>Kema</td><td>Old</td></tr>
+                <tr><td>Yiru</td><td>Yellow</td></tr>
+                <tr><td>Gizu</td><td>Green</td></tr>
+                <tr><td>Puro</td><td>Purple</td></tr>
+                <tr><td>Witu</td><td>White</td></tr>
+                <tr><td>Baku</td><td>Black</td></tr>
+                <tr><td>Temu</td><td>Painful</td></tr>
+                <tr><td>Rani</td><td>Sharp</td></tr>
+                <tr><td>Foju</td><td>Heavy</td></tr>
+                <tr><td>Leni</td><td>Light (weight)</td></tr>
+                <tr><td>Zahu</td><td>Deep</td></tr>
+                <tr><td>Kitu</td><td>Shallow</td></tr>
+                <tr><td>Huma</td><td>Tall</td></tr>
+                <tr><td>Beto</td><td>Short</td></tr>
+                <tr><td>Jizu</td><td>Long</td></tr>
+                <tr><td>Raku</td><td>Wide</td></tr>
+                <tr><td>Sifu</td><td>Narrow</td></tr>
+                <tr><td>Nuto</td><td>Thick</td></tr>
+                <tr><td>Tima</td><td>Thin</td></tr>
+                <tr><td>Yofa</td><td>Fierce</td></tr>
+                <tr><td>Gahu</td><td>Calm</td></tr>
+                <tr><td>Hizu</td><td>Angry</td></tr>
+                <tr><td>Zoku</td><td>Happy</td></tr>
+                <tr><td>Kifu</td><td>Sad</td></tr>
+                <tr><td>Fatu</td><td>Brave</td></tr>
+                <tr><td>Jemo</td><td>Scared</td></tr>
+                <tr><td>Rito</td><td>Quiet</td></tr>
+                <tr><td>Sazu</td><td>Loud</td></tr>
+                <tr><td>Biko</td><td>Smooth</td></tr>
+                <tr><td>Nahu</td><td>Rough</td></tr>
+                <tr><td>Tufu</td><td>Wet</td></tr>
+                <tr><td>Yazu</td><td>Dry</td></tr>
+                <tr><td>Giko</td><td>Full</td></tr>
+                <tr><td>Hafa</td><td>Empty</td></tr>
+                <tr><td>Zitu</td><td>Broken</td></tr>
+                <tr><td>Koju</td><td>Whole</td></tr>
+                <tr><td>Fizu</td><td>Lost</td></tr>
+                <tr><td>Jahu</td><td>Found</td></tr>
+                <tr><td>Renu</td><td>Safe</td></tr>
+                <tr><td>Siko</td><td>Dangerous</td></tr>
+                <tr><td>Buma</td><td>Alive</td></tr>
+                <tr><td>Nifu</td><td>Dead</td></tr>
+                <tr><td>Tazo</td><td>Wise</td></tr>
+                <tr><td>Yiku</td><td>Foolish</td></tr>
+                <tr><td>Gofa</td><td>Clear</td></tr>
+                <tr><td>Hizu</td><td>Cloudy</td></tr>
+                <tr><td>Zemo</td><td>Warm</td></tr>
+                <tr><td>Kiva</td><td>Cool</td></tr>
+                <tr><td>Futo</td><td>Fresh</td></tr>
+                <tr><td>Jera</td><td>Stale</td></tr>
+                <tr><td>Rifu</td><td>Soft (texture)</td></tr>
+                <tr><td>Sahu</td><td>Hard (texture)</td></tr>
+                <tr><td>Bizo</td><td>Sweet</td></tr>
+                <tr><td>Nita</td><td>Bitter</td></tr>
+                <tr><td>Toku</td><td>Sour</td></tr>
+                <tr><td>Yafa</td><td>Salty</td></tr>
+                <tr><td>Gizu</td><td>Spicy</td></tr>
+                <tr><td>Hiko</td><td>Bland</td></tr>
+                <tr><td>Zatu</td><td>Shiny</td></tr>
+                <tr><td>Kofu</td><td>Dull</td></tr>
+                <tr><td>Fima</td><td>Smooth (surface)</td></tr>
+                <tr><td>Juto</td><td>Rough (surface)</td></tr>
+                <tr><td>Razo</td><td>Round</td></tr>
+                <tr><td>Sifu</td><td>Flat</td></tr>
+                <tr><td>Biku</td><td>Curved</td></tr>
+                <tr><td>Nizu</td><td>Straight</td></tr>
+                <tr><td>Tahu</td><td>Twisted</td></tr>
+                <tr><td>Yizo</td><td>Bent</td></tr>
+                <tr><td>Gatu</td><td>Open</td></tr>
+                <tr><td>Hifu</td><td>Closed</td></tr>
+                <tr><td>Zoku</td><td>Near</td></tr>
+                <tr><td>Kima</td><td>Far</td></tr>
+                <tr><td>Fetu</td><td>Powerful</td></tr>
+                <tr><td>Jiza</td><td>Weak (alternative)</td></tr>
+                <tr><td>Ruto</td><td>Rich</td></tr>
+                <tr><td>Saka</td><td>Poor</td></tr>
+                <tr><td>Bino</td><td>Old (worn)</td></tr>
+                <tr><td>Nifu</td><td>Young</td></tr>
+                <tr><td>Tiza</td><td>Beautiful</td></tr>
+                <tr><td>Yahu</td><td>Ugly</td></tr>
+                <tr><td>Giko</td><td>Strange</td></tr>
+		<tr><td>Tizu</td><td>Orange</td></tr>
+		<tr><td>Fahu</td><td>Pink</td></tr>
+		<tr><td>Ziru</td><td>Gray</td></tr>
+		<tr><td>Kahu</td><td>Brown</td></tr>
+		<tr><td>Mizu</td><td>Gold</td></tr>
+		<tr><td>Sizu</td><td>Silver</td></tr>
+		<tr><td>Rofu</td><td>Violet</td></tr>
+		<tr><td>Bahu</td><td>Cyan</td></tr>
+		<tr><td>Jiru</td><td>Indigo</td></tr>
+		<tr><td>Nahu</td><td>Beige</td></tr>
+		<tr><td>Gofu</td><td>Teal</td></tr>
+		<tr><td>Yizu</td><td>Maroon</td></tr>
+		<tr><td>Hizu</td><td>Lavender</td></tr>
+		<tr><td>Kizu</td><td>Turquoise</td></tr>
+		<tr><td>Wahu</td><td>Crimson</td></tr>
+		<tr><td>Fizu</td><td>Excited</td></tr>
+		<tr><td>Tahu</td><td>Nervous</td></tr>
+		<tr><td>Rizu</td><td>Peaceful</td></tr>
+		<tr><td>Biku</td><td>Jealous</td></tr>
+		<tr><td>Sahu</td><td>Proud</td></tr>
+		<tr><td>Nizu</td><td>Lonely</td></tr>
+		<tr><td>Jahu</td><td>Guilty</td></tr>
+		<tr><td>Kifu</td><td>Hopeful</td></tr>
+		<tr><td>Zoku</td><td>Confused</td></tr>
+		<tr><td>Mahu</td><td>Content</td></tr>
+		<tr><td>Gizu</td><td>Ashamed</td></tr>
+		<tr><td>Yahu</td><td>Eager</td></tr>
+		<tr><td>Hifu</td><td>Bored</td></tr>
+		<tr><td>Wizu</td><td>Curious</td></tr>
+		<tr><td>Tifu</td><td>Relieved</td></tr>
+		<tr><td>Rahu</td><td>Sticky</td></tr>
+		<tr><td>Fotu</td><td>Slippery</td></tr>
+		<tr><td>Bizu</td><td>Gritty</td></tr>
+		<tr><td>Sifu</td><td>Silky</td></tr>
+		<tr><td>Nahu</td><td>Bumpy</td></tr>
+		<tr><td>Jizu</td><td>Spiky</td></tr>
+		<tr><td>Kahu</td><td>Fuzzy</td></tr>
+		<tr><td>Zifu</td><td>Crumbly</td></tr>
+		<tr><td>Mahu</td><td>Waxy</td></tr>
+		<tr><td>Gifu</td><td>Leathery</td></tr>
+		<tr><td>Tazu</td><td>Noisy</td></tr>
+		<tr><td>Rifu</td><td>Echoing</td></tr>
+		<tr><td>Fahu</td><td>Booming</td></tr>
+		<tr><td>Sizu</td><td>Whistling</td></tr>
+		<tr><td>Bahu</td><td>Humming</td></tr>
+		<tr><td>Nifu</td><td>Rumbling</td></tr>
+		<tr><td>Jahu</td><td>Cracking</td></tr>
+		<tr><td>Kizu</td><td>Squeaking</td></tr>
+		<tr><td>Zahu</td><td>Rustling</td></tr>
+		<tr><td>Wifu</td><td>Whispering</td></tr>
+		<tr><td>Yofu</td><td>Ancient</td></tr>
+		<tr><td>Gahu</td><td>Modern</td></tr>
+		<tr><td>Hizu</td><td>Sacred</td></tr>
+		<tr><td>Tifu</td><td>Cursed</td></tr>
+		<tr><td>Razu</td><td>Rare</td></tr>
+		<tr><td>Fizu</td><td>Common</td></tr>
+		<tr><td>Sahu</td><td>Precious</td></tr>
+		<tr><td>Biku</td><td>Worthless</td></tr>
+		<tr><td>Nahu</td><td>Fragile</td></tr>
+		<tr><td>Jifu</td><td>Durable</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="verbs" class="tab-content">
+        <table>
+            <thead>
+                <tr><th>Word</th><th>Meaning</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Pled</td><td>To add</td></tr>
+                <tr><td>Eruti</td><td>To allow</td></tr>
+                <tr><td>Zatsue</td><td>To arrive</td></tr>
+                <tr><td>Peyat</td><td>To ask</td></tr>
+                <tr><td>Uaro</td><td>To awake</td></tr>
+                <tr><td>Kishma</td><td>To bathe</td></tr>
+                <tr><td>Izza</td><td>To be</td></tr>
+                <tr><td>Verio</td><td>To borrow</td></tr>
+                <tr><td>Gurunt</td><td>To break</td></tr>
+                <tr><td>Papa</td><td>To buy</td></tr>
+                <tr><td>Yoane</td><td>To call</td></tr>
+                <tr><td>Burlit</td><td>To catch</td></tr>
+                <tr><td>Kipatcho</td><td>To clean</td></tr>
+                <tr><td>Crimba</td><td>To climb</td></tr>
+                <tr><td>Lokta</td><td>To close</td></tr>
+                <tr><td>Kime</td><td>To come</td></tr>
+                <tr><td>Promovu</td><td>To continue</td></tr>
+                <tr><td>Kuenti</td><td>To cook</td></tr>
+                <tr><td>Rizi</td><td>To copy</td></tr>
+                <tr><td>Ueni</td><td>To create</td></tr>
+                <tr><td>Frungen</td><td>To decide</td></tr>
+                <tr><td>Nupe</td><td>To destroy</td></tr>
+                <tr><td>Dreat</td><td>To die</td></tr>
+                <tr><td>Uempe</td><td>To dig</td></tr>
+                <tr><td>Placto</td><td>To divide</td></tr>
+                <tr><td>Doona</td><td>To do</td></tr>
+                <tr><td>Wooja</td><td>To draw</td></tr>
+                <tr><td>Dringa</td><td>To drink</td></tr>
+                <tr><td>Jurumpa</td><td>To drive</td></tr>
+                <tr><td>Platten</td><td>To drop</td></tr>
+                <tr><td>Etta</td><td>To eat</td></tr>
+                <tr><td>Ekki</td><td>To empty</td></tr>
+                <tr><td>Enta</td><td>To enter</td></tr>
+                <tr><td>Jredi</td><td>To erase</td></tr>
+                <tr><td>Ribben</td><td>To exit</td></tr>
+                <tr><td>Flalle</td><td>To fall</td></tr>
+                <tr><td>Zieba</td><td>To farewell</td></tr>
+                <tr><td>Yufoon</td><td>To feel</td></tr>
+                <tr><td>Funan</td><td>To fight</td></tr>
+                <tr><td>Affona</td><td>To fill</td></tr>
+                <tr><td>Komag</td><td>To finish</td></tr>
+                <tr><td>Ert</td><td>To fix</td></tr>
+                <tr><td>Meiya</td><td>To forget</td></tr>
+                <tr><td>Ruffen</td><td>To gather</td></tr>
+                <tr><td>Rouse</td><td>To give</td></tr>
+                <tr><td>Gogen</td><td>To go</td></tr>
+                <tr><td>Roshagi</td><td>To greet</td></tr>
+                <tr><td>Alittia</td><td>To hang</td></tr>
+                <tr><td>Empengwe</td><td>To hate</td></tr>
+                <tr><td>Ras</td><td>To have</td></tr>
+                <tr><td>Eart</td><td>To hear</td></tr>
+                <tr><td>Foofe</td><td>To hide</td></tr>
+                <tr><td>Hitta</td><td>To hit</td></tr>
+                <tr><td>Wokoja</td><td>To hold</td></tr>
+                <tr><td>Susife</td><td>To hunt</td></tr>
+                <tr><td>Judike</td><td>To jump</td></tr>
+                <tr><td>Puthitta</td><td>To kick</td></tr>
+                <tr><td>Ira</td><td>To know (mental)</td></tr>
+                <tr><td>Surs</td><td>To know (familiarity)</td></tr>
+                <tr><td>Plassa</td><td>To lay</td></tr>
+                <tr><td>Leff</td><td>To leave</td></tr>
+                <tr><td>Bigro</td><td>To like</td></tr>
+                <tr><td>Hema</td><td>To listen</td></tr>
+                <tr><td>Suati</td><td>To live</td></tr>
+                <tr><td>Harmo</td><td>To love</td></tr>
+                <tr><td>Luat</td><td>To make</td></tr>
+                <tr><td>Swerba</td><td>To mix</td></tr>
+                <tr><td>Kokkot</td><td>To multiply</td></tr>
+                <tr><td>Resi</td><td>To open</td></tr>
+                <tr><td>Nuat</td><td>To pay</td></tr>
+                <tr><td>Mankwe</td><td>To play</td></tr>
+                <tr><td>Danhitta</td><td>To punch</td></tr>
+                <tr><td>Bet</td><td>To put</td></tr>
+                <tr><td>Roswa</td><td>To read</td></tr>
+                <tr><td>Kupat</td><td>To receive</td></tr>
+                <tr><td>Foer</td><td>To regret</td></tr>
+                <tr><td>Membria</td><td>To remember</td></tr>
+                <tr><td>Ritsi</td><td>To remove</td></tr>
+                <tr><td>Kalakit</td><td>To return</td></tr>
+                <tr><td>Vutin</td><td>To ride</td></tr>
+                <tr><td>Aruk</td><td>To run</td></tr>
+                <tr><td>Vet</td><td>To say</td></tr>
+                <tr><td>Ase</td><td>To see</td></tr>
+                <tr><td>Sorio</td><td>To sell</td></tr>
+                <tr><td>Kampe</td><td>To send</td></tr>
+                <tr><td>Gui</td><td>To show</td></tr>
+                <tr><td>Figgo</td><td>To sit</td></tr>
+                <tr><td>Merad</td><td>To sleep</td></tr>
+                <tr><td>Poumo</td><td>To smell</td></tr>
+                <tr><td>Piu</td><td>To start</td></tr>
+                <tr><td>Retta</td><td>To stop</td></tr>
+                <tr><td>Unte</td><td>To subtract</td></tr>
+                <tr><td>Aiosh</td><td>To swim</td></tr>
+                <tr><td>Snato</td><td>To take</td></tr>
+                <tr><td>Zuma</td><td>To burn</td></tr>
+                <tr><td>Kefa</td><td>To bind</td></tr>
+                <tr><td>Tilu</td><td>To flee</td></tr>
+                <tr><td>Buro</td><td>To bleed</td></tr>
+                <tr><td>Haja</td><td>To search</td></tr>
+                <tr><td>Vemi</td><td>To heal</td></tr>
+                <tr><td>Raku</td><td>To break free</td></tr>
+                <tr><td>Fizu</td><td>To chase</td></tr>
+                <tr><td>Yuto</td><td>To fly</td></tr>
+                <tr><td>Gema</td><td>To trap</td></tr>
+                <tr><td>Nitu</td><td>To shine</td></tr>
+                <tr><td>Wazu</td><td>To fear</td></tr>
+                <tr><td>Koru</td><td>To cool</td></tr>
+                <tr><td>Tefa</td><td>To warm</td></tr>
+                <tr><td>Jiku</td><td>To steal</td></tr>
+                <tr><td>Bani</td><td>To guard</td></tr>
+                <tr><td>Ruto</td><td>To grow</td></tr>
+                <tr><td>Hemu</td><td>To cry</td></tr>
+                <tr><td>Falu</td><td>To fall apart</td></tr>
+                <tr><td>Zoti</td><td>To build</td></tr>
+                <tr><td>Kivu</td><td>To warn</td></tr>
+                <tr><td>Tamu</td><td>To trust</td></tr>
+                <tr><td>Yafe</td><td>To betray</td></tr>
+                <tr><td>Ginu</td><td>To amplify</td></tr>
+                <tr><td>Voka</td><td>To wait</td></tr>
+                <tr><td>Rimu</td><td>To shake</td></tr>
+                <tr><td>Hito</td><td>To carry</td></tr>
+                <tr><td>Femu</td><td>To follow</td></tr>
+                <tr><td>Zahu</td><td>To lose</td></tr>
+                <tr><td>Komi</td><td>To win</td></tr>
+                <tr><td>Jufa</td><td>To lift</td></tr>
+                <tr><td>Sizu</td><td>To drop (alternative)</td></tr>
+                <tr><td>Boku</td><td>To pull</td></tr>
+                <tr><td>Niza</td><td>To push</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="numbers" class="tab-content">
+        <table>
+            <thead>
+                <tr><th>Word</th><th>Meaning</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Nul</td><td>0</td></tr>
+                <tr><td>Una</td><td>1</td></tr>
+                <tr><td>Dua</td><td>2</td></tr>
+                <tr><td>Tri</td><td>3</td></tr>
+                <tr><td>Foru</td><td>4</td></tr>
+                <tr><td>Pimu</td><td>5</td></tr>
+                <tr><td>Sizu</td><td>6</td></tr>
+                <tr><td>Setu</td><td>7</td></tr>
+                <tr><td>Otu</td><td>8</td></tr>
+                <tr><td>Novu</td><td>9</td></tr>
+                <tr><td>Deka</td><td>10 (A in base-12)</td></tr>
+                <tr><td>Levu</td><td>11 (B in base-12)</td></tr>
+                <tr><td>Doza</td><td>12 (10 in base-12)</td></tr>
+                <tr><td>Doza-una</td><td>13 (11 in base-12)</td></tr>
+                <tr><td>Dua-doza</td><td>24 (20 in base-12)</td></tr>
+                <tr><td>Tri-doza</td><td>36 (30 in base-12)</td></tr>
+                <tr><td>Doza-doza</td><td>144 (100 in base-12)</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="prepositions" class="tab-content">
+        <table>
+            <thead>
+                <tr><th>Word</th><th>Meaning</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Ni</td><td>In</td></tr>
+                <tr><td>Su</td><td>On</td></tr>
+                <tr><td>Be</td><td>Under</td></tr>
+                <tr><td>Fa</td><td>Over</td></tr>
+                <tr><td>Ti</td><td>Beside</td></tr>
+                <tr><td>Va</td><td>To</td></tr>
+                <tr><td>De</td><td>From</td></tr>
+                <tr><td>Ko</td><td>At</td></tr>
+                <tr><td>Mi</td><td>Through</td></tr>
+                <tr><td>Zu</td><td>Against</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="detailMarkers" class="tab-content">
+        <table>
+            <thead>
+                <tr><th>Word</th><th>Meaning</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Tem</td><td>Who</td></tr>
+                <tr><td>Hei</td><td>What</td></tr>
+                <tr><td>At</td><td>When</td></tr>
+                <tr><td>To</td><td>Where</td></tr>
+                <tr><td>Bete</td><td>Why/Because</td></tr>
+                <tr><td>Wit</td><td>With</td></tr>
+                <tr><td>Iva</td><td>If</td></tr>
+                <tr><td>Su</td><td>And</td></tr>
+                <tr><td>Kuye</td><td>Whenever</td></tr>
+                <tr><td>Gore</td><td>Also</td></tr>
+                <tr><td>Fret</td><td>Then</td></tr>
+                <tr><td>Chua</td><td>As</td></tr>
+                <tr><td>Pou</td><td>For</td></tr>
+                <tr><td>Miyen</td><td>While</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            const tabs = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+
+            const buttons = document.getElementsByClassName("tab-button");
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            event.currentTarget.classList.add("active");
+
+            filterTable(); // Reset search on tab switch
+        }
+
+        function filterTable() {
+            const input = document.getElementById("searchBar").value.toLowerCase();
+            const tabs = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabs.length; i++) {
+                if (tabs[i].style.display === "block") {
+                    const rows = tabs[i].getElementsByTagName("tr");
+                    for (let j = 1; j < rows.length; j++) { // Skip header
+                        const cells = rows[j].getElementsByTagName("td");
+                        const word = cells[0].textContent.toLowerCase();
+                        const meaning = cells[1].textContent.toLowerCase();
+                        if (word.includes(input) || meaning.includes(input)) {
+                            rows[j].style.display = "";
+                        } else {
+                            rows[j].style.display = "none";
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
